@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="topFaceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="rightFaceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+    <linearGradient id="leftFaceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background with rounded corners and gradient -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGradient)"/>
+  
+  <!-- 3D Model - more detailed cube with gradients -->
+  <g transform="translate(32, 32) scale(0.85) translate(-32, -32)" filter="url(#shadow)">
+    <!-- Top face -->
+    <polygon points="32,14 50,24 32,34 14,24" fill="url(#topFaceGradient)" stroke="#0f172a" stroke-width="0.75"/>
+    
+    <!-- Right face -->
+    <polygon points="50,24 50,44 32,54 32,34" fill="url(#rightFaceGradient)" stroke="#0f172a" stroke-width="0.75"/>
+    
+    <!-- Left face -->
+    <polygon points="14,24 14,44 32,54 32,34" fill="url(#leftFaceGradient)" stroke="#0f172a" stroke-width="0.75"/>
+  </g>
+  
+  <!-- Orbit rings - more elegant, with varying opacity -->
+  <ellipse cx="32" cy="32" rx="28" ry="10" fill="none" stroke="#f8fafc" stroke-width="1.5" stroke-opacity="0.8" transform="rotate(-15, 32, 32)"/>
+  <ellipse cx="32" cy="32" rx="26" ry="16" fill="none" stroke="#f8fafc" stroke-width="1" stroke-opacity="0.6" transform="rotate(75, 32, 32)"/>
+  
+  <!-- SGM text - more refined -->
+  <text x="32" y="33" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#ffffff" text-anchor="middle" stroke="#000" stroke-opacity="0.3" stroke-width="0.1">SGM</text>
+  
+  <!-- Glossy highlight -->
+</svg>
